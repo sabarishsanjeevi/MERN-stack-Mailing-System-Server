@@ -5,7 +5,6 @@ const app = express();
 app.use(cors());
 app.listen(4000);
 app.use(express.json())
-
 app.post('/mail', (req, res)=>{
     let config = nodemailer.createTransport({
         host: 'techcodes.in',
@@ -27,7 +26,6 @@ app.post('/mail', (req, res)=>{
             console.log(err)
         }else{
             res.send("mail sent successfully.")
-
             console.log(info)
         }
     })
